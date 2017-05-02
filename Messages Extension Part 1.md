@@ -2,17 +2,13 @@
 
 In this tutorial, we will create an extension to the Messages app that provides custom stickers to go along with the regular messages. You can start the project on Xcode by selecting `File -> New -> Project`, then coosing the `iMessage Application` template under the `iOS` tab. Give the project whatever name you like, and move on to the next section.
 
-<p style="text-align:center;">
-    <img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig1.png" width="80%">
-</p>
+![Figure 1](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig1.png)
 
 ## Getting rid of the `MainInterface.storyboard`
 
 I find it preferable to deal with views programmatically when programming app extensions. In order to do so, go to the `General` tab for the `MessagesExtension` target. Set the `Main Interface` field under `Deployment Info` to blank.
 
-<p style="text-align:center;">
-    <img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig2.png" width="80%">
-</p>
+![Figure 2](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig2.png)
 
 Next, you need to change the `Info.plist` file for your *target*. Right-click on it, the choose `Open As -> Source Code`. Under the `<dict>` key, add the following:
 
@@ -58,8 +54,4 @@ setupLabelConstraints()
 
 It is crucial that you call `setupLabelConstraints()` *after* you have called `view.addSubview(label)`, otherwise your app will crash. The result is shown below:
 
-<p style="text-align:center;">
-    <img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png" width="40%">
-    
-    <img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig4.png" width="40%">
-</p>
+![Figure 3](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png)
