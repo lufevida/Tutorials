@@ -2,13 +2,13 @@
 
 In this tutorial, we will create an extension to the Messages app that provides custom stickers to go along with the regular messages. You can start the project on Xcode by selecting `File -> New -> Project`, then coosing the `iMessage Application` template under the `iOS` tab. Give the project whatever name you like, and move on to the next section.
 
-![Figure 1](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig1.png)
+<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig1.png" width="80%">
 
 ## Getting rid of the `MainInterface.storyboard`
 
 I find it preferable to deal with views programmatically when programming app extensions. In order to do so, go to the `General` tab for the `MessagesExtension` target. Set the `Main Interface` field under `Deployment Info` to blank.
 
-![Figure 2](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig2.png)
+<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig2.png" width="80%">
 
 Next, you need to change the `Info.plist` file for your *target*. Right-click on it, the choose `Open As -> Source Code`. Under the `<dict>` key, add the following:
 
@@ -34,7 +34,7 @@ let label: UILabel = {
 }()
 ```
 
-Since we are not using storyboards, we need to deal with this label's constraints programmatically. This is a very easy task, just add the function below to your `MessaegsViewController` class:
+Since we are not using storyboards, we need to deal with this label's constraints programmatically. This is a very easy task, just add the function below to your `MessagesViewController` class:
 
 ```swift
 func setupLabelConstraints() {
@@ -54,6 +54,6 @@ setupLabelConstraints()
 
 It is crucial that you call `setupLabelConstraints()` *after* you have called `view.addSubview(label)`, otherwise your app will crash. The result is shown below:
 
-![Figure 3](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png)
+<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png" width="40%">
 
-![Figure 4](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig4.png)
+<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig4.png" width="40%">
