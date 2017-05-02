@@ -1,4 +1,4 @@
-# Creating an extension to the built-in Messages app
+# Creating an Extension to the Built-in Messages App
 
 In this tutorial, we will create an extension to the Messages app that provides custom stickers to go along with the regular messages. You can start the project on Xcode by selecting `File -> New -> Project`, then coosing the `iMessage Application` template under the `iOS` tab. Give the project whatever name you like, and move on to the next section.
 
