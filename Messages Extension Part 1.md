@@ -54,5 +54,6 @@ setupLabelConstraints()
 
 It is crucial that you call `setupLabelConstraints()` *after* you have called `view.addSubview(label)`, otherwise your app will crash. The result is shown below:
 
-<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png" width="50%">
-<img src="https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig4.png" width="50%">
+![Figure 3](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig3.png)
+
+![Figure 4](https://raw.githubusercontent.com/lufevida/Tutorials/master/assets/MessagesExtension/fig4.png)
